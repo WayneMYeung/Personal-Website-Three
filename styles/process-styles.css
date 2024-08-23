@@ -1,0 +1,239 @@
+/* Basic reset */
+body, h1, h2, p, ul, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Navbar styling */
+/* Sticky Navbar */
+.floating-navbar {
+    position: sticky;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #252525;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content; /* Adjust the width to fit content */
+    margin: 0 auto;
+}
+
+.floating-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.floating-navbar ul li {
+    position: relative;
+}
+
+.floating-navbar ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, width 0.3s ease;
+    width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #333;
+}
+
+.floating-navbar ul li a:hover {
+    background-color: #444;
+    width: 150px; /* Adjust this width to fit the text */
+}
+
+.floating-navbar ul li a .nav-text {
+    margin-left: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: none; /* Hide text initially */
+}
+
+.floating-navbar ul li a:hover .nav-text {
+    opacity: 1;
+    display: inline-block; /* Show text on hover */
+}
+
+.floating-navbar ul li a i {
+    font-size: 24px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Align icon to center when text is hidden */
+.floating-navbar ul li a:not(:hover) i {
+    margin-left: 0;
+}
+
+.floating-navbar ul li a:hover i {
+    margin-left: 10px; /* Adjust margin to make space for the text */
+}
+
+
+
+/* Process Page Styling */
+#process {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.process-header h1 {
+    font-size: 40px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.process-header p {
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.process-step img {
+    width:100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.process-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.process-step {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    margin: 40px 0;
+}
+
+.description p {
+    padding: 10px 0;
+}
+
+.process-step h2 {
+    font-size: 28px;
+    color: #00aced;
+    margin-bottom: 10px;
+}
+
+.process-step h3 {
+    font-size: 28px;
+    color: #00aced;
+    margin-bottom: 30px;
+}
+
+.process-step p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+}
+
+.description {
+    padding: 20px 60px;
+    text-align: left;
+}
+
+.description li {
+    list-style: none;
+    padding: 20px 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #141414;
+    color: #ccc;
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    padding-bottom:0;
+    margin-top: 100px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-section h2, 
+.footer-section h4 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #252525;
+    margin-bottom: 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #ccc;
+}
